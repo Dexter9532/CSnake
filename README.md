@@ -30,9 +30,16 @@ To view output run:
 west espressif monitor
 ```
 
-## Clang-format
+## Clang
 
-The project uses clang-format.
+The project uses clang-format & clang-tidy.
+
+Install dependencies:
+```
+sudo apt-get update
+sudo apt-get install -y clang-tidy
+sudo apt-get install -y clang-format
+```
 
 Run format check:
 ```
@@ -42,4 +49,9 @@ clang-format --dry-run -Werror src/*
 Run formatter:
 ```
 clang-format -i src/*
+```
+
+Run clang-tidy:
+```
+clang-tidy src/*.c -- -Iinclude
 ```
