@@ -29,3 +29,17 @@ To view output run:
 ```
 west espressif monitor
 ```
+
+## Clang-format
+
+The project uses clang-format.
+
+Run format check:
+```
+clang-format --dry-run -Werror src/*
+```
+
+Run formatter:
+```
+clang-format -i src/*
+```
